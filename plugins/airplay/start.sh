@@ -22,4 +22,5 @@ while [[ "$(curl --silent --head --output /dev/null --write-out '%{http_code}' -
 exec shairport-sync \
   --name "$SOUND_DEVICE_NAME" \
   --output pa \
-  | echo "Shairport-sync started. Device is discoverable as $SOUND_DEVICE_NAME"
+  --password "$AIRPLAY_PASSWORD" \
+  | echo "Shairport-sync started. Device is discoverable as $SOUND_DEVICE_NAME, password is $AIRPLAY_PASSWORD"
